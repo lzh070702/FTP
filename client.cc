@@ -83,8 +83,10 @@ int exec_cmd(int cmd_code) {
             return 1;
         }
         current_dir = get_current_dir();
+        cout << "Local directory now: " << current_dir << endl;
     } else if (cmd_code == -2) {
-        system("pwd");
+        cout << current_dir << endl;
+        // system("pwd");
     } else if (cmd_code == -1) {
         system(cmd->get_cmd_line().substr(1).c_str());
     }
